@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>johncrisostomo.com</title>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="typewriter.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Ubuntu+Mono" rel="stylesheet">
     <style>
       * {
         margin: 0;
@@ -21,8 +25,31 @@
         color: green;
       }
 
+      li {
+        margin-top: 10px;
+      }
+
+      a {
+        color: green;
+      }
+
+      #blinky {
+        -moz-animation-duration: 2s;
+        -moz-animation-delay: 500;
+        -moz-animation-iteration-count: infinite;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-delay: 500;
+        -webkit-animation-iteration-count: infinite;
+      }
+
+      .cursor2 {
+        margin-top: 15px;
+        display: none;
+      }
+
       .header {
         height: 25px;
+        font-family: 'Ubuntu Mono', monospace;
         font-size: 15px;
         background-color: red;
         color: #fff;
@@ -39,27 +66,44 @@
         margin-left: 10px;
         margin-top: 10px;
       }
+
+      .cursor {
+        margin-bottom: 15px;
+      }
     </style>
   </head>
   <body>
     <div class="header"><span class="header-text">guest@johncrisostomo.com : ~ <span id="window-size"></span></span></div>
     <div class="terminal">
-      <p>guest@johncrisostomo.com $ <span class="command">ls -la </span></p>
-      <div class="list">
-        <ul>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Github</a></li>
-          <li><a href="#">Codepen</a></li>
-          <li><a href="#">freeCodeCamp</a></li>
-        </ul>
-      </div>
+      <p class="cursor">guest@johncrisostomo.com $ <span class="command">ls -la </span></p>
+      <span class="list">
+      </span>
+      <p class="cursor2">guest@johncrisostomo.com $ <span id="blinky" class="animated flash">▓</span></p>
     </div>
     <script>
       $('document').ready(() => {
         $('#window-size').text($(window).innerWidth() + 'x' + $(window).innerHeight());
-        $('.list').hide();
         $('.command').typewrite({
-          'extra_char': '▓'
+          'extra_char': '▓',
+          callback: function() {
+            setTimeout(function () {
+              const time = moment().format('MMM D H:mm');
+              const template = '-rw-rw-r--&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;jdsc&nbsp;&nbsp;jdsc&nbsp;&nbsp;4096&nbsp;&nbsp;' + time + '&nbsp;&nbsp;&nbsp;&nbsp;';
+              $('.list').html("<ul><li><span class='temp'></span><a id='b' href='#''></a></li><li><span class='temp'></span><a id='g' href='#'></a></li><li><span class='temp'></span><a id='c' href='#'></a></li><li><span class='temp'></span><a id='fcc' href='#''></a></li></ul>");
+              $('.temp').html(template);
+              $('#b').text('blog');
+              $('#b').attr('href', 'https://blog.johncrisostomo.com');
+              $('#g').text('Github');
+              $('#g').attr('href', 'https://github.com/johncrisostomo');
+              $('#c').text('Codepen');
+              $('#c').attr('href', 'https://codepen.io/johncrisostomo/');
+              $('#fcc').text('freeCodeCamp');
+              $('#fcc').attr('href', 'https://www.freecodecamp.com/johncrisostomo');
+              $('.command').html('ls -la');
+              $('.cursor2').show();
+            }, 300);
+          },
+          delay: 200,
         });
       });
     </script>
