@@ -35,6 +35,29 @@
         color: green;
       }
 
+      footer {
+        position: absolute;
+        color: #000;
+        background-color: #32CD32;
+        bottom: 0;
+        margin-bottom: 10px;
+        left: 0;
+        height: 22px;
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .footer-text {
+        font-weight: 500;
+        font-family: 'Ubuntu Mono', monospace;
+        display: inline-block;
+        margin-top: 5px;
+      }
+
+      .footer-text-right {
+        float: right;
+      }
+
       #blinky {
         -moz-animation-duration: 2s;
         -moz-animation-delay: 500;
@@ -82,9 +105,20 @@
       </span>
       <p class="cursor2">guest@johncrisostomo.com $ <span id="blinky" class="animated flash">▓</span></p>
     </div>
+    <footer>
+      <span class="footer-text">[base] 0:zsh*</span>
+      <span class="footer-text footer-text-right">"guest@johncrisostomo.com: ~" <span id="timedate"></span></span>
+    </footer>
     <script>
       $('document').ready(() => {
+        setInterval(function() {
+          $('#timedate').text(moment().format('HH:mm D-MMM-YY'));
+        }, 30 * 1000);
+
+        $('#timedate').text(moment().format('HH:mm D-MMM-YY'));
+
         $('#window-size').text($(window).innerWidth() + 'x' + $(window).innerHeight());
+
         $('.command').typewrite({
           'extra_char': '▓',
           callback: function() {
@@ -107,6 +141,7 @@
           },
           delay: 200,
         });
+
       });
     </script>
   </body>
