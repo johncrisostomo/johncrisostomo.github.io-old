@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 342px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    background-color: black;
+    font-family: 'Inconsolata', monospace;
+    font-size: 10px;
+    color: #228b22;
+  }
+}
+
+@media (min-width: 430px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    background-color: black;
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+    color: #228b22;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    background-color: black;
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+    color: #228b22;
+  }
+}
+
+li {
+  margin-top: 5px;
+}
+
+a {
+  color: green;
+}
+
+footer {
+  position: absolute;
+  color: #000;
+  background-color: #9acd32;
+  bottom: 0;
+  margin-bottom: 10px;
+  left: 0;
+  height: 22px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer-text {
+  font-weight: 550;
+  font-family: 'Ubuntu Mono', monospace;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.footer-text-right {
+  float: right;
+}
+
+#blinky {
+  -moz-animation-duration: 2s;
+  -moz-animation-delay: 500;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 500;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.cursor2 {
+  margin-top: 15px;
+  display: none;
+}
+
+.header {
+  height: 35px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 20px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+
+.header-text {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.terminal {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.cursor {
+  margin-bottom: 15px;
+}
