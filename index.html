@@ -121,6 +121,10 @@
 
         $('#window-size').text($(window).innerWidth() + 'x' + $(window).innerHeight());
 
+        $(window).resize(function() {
+          $('#window-size').text($(window).innerWidth() + 'x' + $(window).innerHeight());
+        });
+
         $('.command').typewrite({
           'extra_char': '▓',
           callback: function() {
