@@ -36,6 +36,33 @@
   }
 }
 
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: #EAEA99;
+}
+
+@media (min-width: 320px) {
+  #banner {
+
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #banner {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1920px) {
+  #banner {
+    font-size: 15px;
+  }
+}
+
 li {
   margin-top: 5px;
 }
