@@ -9,7 +9,7 @@
     -moz-text-size-adjust: 100%;
     background-color: black;
     font-family: 'Inconsolata', monospace;
-    font-size: 10px;
+    font-size: 11px;
     color: #228b22;
   }
 }
@@ -31,7 +31,7 @@
     -moz-text-size-adjust: 100%;
     background-color: black;
     font-family: 'Inconsolata', monospace;
-    font-size: 22px;
+    font-size: 18px;
     color: #228b22;
   }
 }
@@ -109,9 +109,9 @@ footer {
 }
 
 .header {
-  height: 35px;
+  height: 25px;
   font-family: 'Ubuntu Mono', monospace;
-  font-size: 20px;
+  font-size: 15px;
   background-color: red;
   color: #fff;
   text-align: center;
