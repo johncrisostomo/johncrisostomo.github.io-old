@@ -39,7 +39,7 @@ $('document').ready(() => {
                     'href',
                     'https://www.freecodecamp.com/johncrisostomo'
                 );
-                $('#photography').text('Photography');
+                $('#photography').text('photography');
                 $('#instagram').attr('href', 'https://www.johncrisostomo.com');
                 $('.command').html('ls -l');
                 $('.cursor2').show();
