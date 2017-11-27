@@ -25,7 +25,7 @@ $('document').ready(() => {
                     time +
                     '&nbsp;&nbsp;&nbsp;&nbsp;';
                 $('.list').html(
-                    "<ul><li><span class='temp'></span><a target='_blank' id='b' href='#''></a></li><li><span class='temp'></span><a target='_blank' id='g' href='#'></a></li><li><span class='temp'></span><a target='_blank' id='c' href='#'></a></li><li><span class='temp'></span><a target='_blank' id='fcc' href='#''></a></li><li><span class='temp'></span><a target='_blank' id='instagram' href='#''></a></li></ul>"
+                    "<ul><li><span class='temp'></span><a target='_blank' id='b' href='#''></a></li><li><span class='temp'></span><a target='_blank' id='g' href='#'></a></li><li><span class='temp'></span><a target='_blank' id='c' href='#'></a></li><li><span class='temp'></span><a target='_blank' id='fcc' href='#''></a></li><li><span class='temp'></span><a target='_blank' id='photography' href='#''></a></li></ul>"
                 );
                 $('.temp').html(template);
                 $('#b').text('blog');
@@ -39,11 +39,8 @@ $('document').ready(() => {
                     'href',
                     'https://www.freecodecamp.com/johncrisostomo'
                 );
-                $('#instagram').text('Instagram');
-                $('#instagram').attr(
-                    'href',
-                    'https://instagram.com/_hackneyed'
-                );
+                $('#photography').text('Photography');
+                $('#instagram').attr('href', 'https://www.johncrisostomo.com');
                 $('.command').html('ls -l');
                 $('.cursor2').show();
             }, 300);
